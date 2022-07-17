@@ -1,0 +1,148 @@
+GIT e GITHUB
+
+git - sistema de versionamento de código
+      distribuido.
+
+criado por Linus Torvald
+
+1 - controle de versao
+2 - armazenamento em nuvem
+3 - trabalho em equipe
+4 - melhorar seu codigo
+5 - reconhecimento
+
+command line interface (CLI) e instalação
+
+listar - dir (windows) / ls (linux)
+navegação
+
+cd / - vai para a base do diretorio
+cd Windows (para entrar dentro da pasta)
+cd .. para sair de um nivel do diretorio
+cls e clear - para limpar a tela (win e Lin)
+mkdir criar um diretorio
+echo hello > hello.txt
+remover repositorio - rmdir workspace /S /Q
+
+Entendendo como o git funciona
+
+-SHA1
+-Objetos fundamentais
+-Sistema distribuídos
+-Segurança
+
+SHA1 - security hash algorithm, é um conjunto de 
+funções criptograficas projetadas pela NSA.
+Gera um conjunto de caracteres de 40 dígitos.
+É uma forma curta de representar um arquivo.
+
+Objetos internos do GIT
+
+(Três tipos básicos responsaveis pelo versiona
+mento do código).
+
+* BLOBS - (encriptação)
+ex.: echo 'conteudo' | git hash-object --stdin
+
+* TREES - As trees armazenam blobs, as trees
+também contém metadados.
+
+* COMMITS - O commit é o objeto que junta tudo.
+
+Chaves SSH e Tokens
+
+Chaves SSH - é uma forma de estabelecer uma conexão
+segura e encriptada entre duas máquinas.
+
+Gerar uma chave ssh no git (cli)
+
+fazer o passo a passo pelo gitbash
+passo a passo
+
+ssh-keygen -t ed225519 -C email@email.com
+
+para visualizar no diretorio a chave e/ou o 
+conteudo dessas chaves:
+
+/c/users/user/.ssh/
+
+Comando para inicializar as chaves no gitbash
+
+eval $(ssh-agent -s)
+
+entregando as chaves para o agent
+
+ainda no diretorio .ssh, pegar o nome das chaves
+(ls) e digitar o comando
+
+ssh-add (nome-da-chave-privada)
+
+Comando para clonar um repositório
+
+git clone (caminho ssh do github que se deseja clonar)
+
+para clonar o repositorio usar o protocolo SSH
+
+Token de acesso pessoal
+
+para clonar o repositorio usar o protocolo HTTPS
+
+Iniciar um repositorio GIT
+Iniciar o versionamento
+Criar um commit
+
+git init
+git add
+git commit
+
+ls -a verificar arquivos ocultos
+
+configurando o repositório na minha máquina
+
+git config --global user.email "email@email.com"
+
+git config --global user.name user
+
+para criar o repositorio
+
+git add * (adicionar todos os itens da pasta)
+git commit -m "commit inicial"
+
+Ciclo de vida dos arquivos
+
+git init
+
+inicializa um repositorio no git
+
+tracked - arquivos que o git mapeado
+untracked - não mapeados
+
+tracked
+
+unmodified
+modified
+staged
+
+
+Ambiente de dev
+
+working directory - staging area - local repository
+
+Servidor
+
+remote repository
+
+git status - monitora o estado dos arquivos
+
+Resolvendo conflitos
+
+origin (git@github.com:fbarau/livro-receitas.git)
+
+git push origin master - submiter arquivos para o repositorio no
+github
+
+git pull origin master - atualizar os arquivos que 
+estao no github para sua maquina.
+
+
+
