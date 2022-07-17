@@ -59,18 +59,12 @@ Gerar uma chave ssh no git (cli)
 fazer o passo a passo pelo gitbash
 passo a passo
 
-ssh-keygen -t ed225519 -C nandaraujo@gmail.com
+ssh-keygen -t ed225519 -C <email-pessoal>
 
 para visualizar no diretorio a chave e/ou o 
 conteudo dessas chaves:
 
-/c/users/fbarau/.ssh/
-
-Minha chave publica para ser usada no github
-
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA70I0IDlZepUbZTdVX81a1SYqUi+s+f5Ag6X9PJp7LO nandaraujo@gmail.com
-
-(Senha do gitbash - Ellen*2019)
+/c/users/<user>/.ssh/
 
 Comando para inicializar as chaves no gitbash
 
@@ -105,9 +99,9 @@ ls -a verificar arquivos ocultos
 
 configurando o repositório na minha máquina
 
-git config --global user.email "nandaraujo@gmail.com"
+git config --global user.email "email@email.com"
 
-git config --global user.name Fernanda
+git config --global user.name user
 
 para criar o repositorio
 
